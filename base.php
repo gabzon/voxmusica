@@ -29,18 +29,13 @@ do_action('get_header');
         <?php include Wrapper\sidebar_path(); ?>
         <br>
         <?php $country = get_terms( 'country' , array('order' => 'ASC')); ?>
-        <!-- <h3>Chansons par pays</h3> -->
-        <?php
-        foreach ($country as $key) {
-            //echo $key->name . '<br>';
-        }
-        ?>
+
     </div>
 </div>
 
 <div class="pusher">
-    <div id="layout" class="ui padded equal height grid stackable">
-        <div class="three wide orange computer only column">
+    <div class="ui padded equal height grid stackable">
+        <div class="three wide column orange computer only">
             <aside class="main-sidebar">
                 <br>
                 <a class="logo ui big inverted labeled icon button" href="<?= esc_url(home_url('/')); ?>" style="text-transform: uppercase; text-align:center">
@@ -52,18 +47,13 @@ do_action('get_header');
                 <br>
                 <?php $country = get_terms( 'country' , array('order' => 'ASC')); ?>
                 <!-- <h3>Chansons par pays</h3> -->
-                <?php
-                foreach ($country as $key) {
-                    //echo $key->name . '<br>';
-                }
-                ?>
             </aside><!-- /.sidebar -->
         </div>
         <div class="thirteen wide column">
             <?php get_template_part('templates/header'); ?>
             <main class="main">
                 <?php include Wrapper\template_path(); ?>
-            </main><!-- /.main -->
+            </main>
         </div>
     </div>
 </div>
